@@ -1,0 +1,151 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0px;
+  font-size: $font-size-medium;
+
+  overflow: hidden;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    align-items: center;
+
+    &_info {
+      height: 48px;
+      align-items: center;
+      display: flex;
+      gap: 12px;
+    }
+  }
+
+  &__data {
+    text-align: left;
+    > p {
+      margin-top: 5px;
+      font-size: $font-size-small;
+      line-height: $line-height-medium;
+    }
+  }
+
+  &__content {
+    // font-size: $font-size-medium;
+    text-align: left;
+  }
+
+  &__actions {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+
+    &_rating {
+      position: relative;
+    }
+
+    &_tooltip {
+      background-color: #fff;
+      font-weight: 600;
+      position: absolute;
+
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      bottom: calc(100% + 8px);
+      width: 95%;
+      height: 32px;
+      border-radius: 4px;
+      border: 1px solid $border-color;
+
+      visibility: hidden;
+
+      &.hover {
+        visibility: visible;
+      }
+      .positive {
+        width: 50%;
+        text-align: center;
+        color: $positive-rating-color;
+      }
+
+      .negative {
+        text-align: center;
+        width: 50%;
+        color: $negative-rating-color;
+      }
+
+      .line {
+        width: 1px;
+        height: 60%;
+        background-color: $border-color;
+      }
+
+      &:after {
+        position: absolute;
+        bottom: -17%;
+        width: 10px;
+        height: 10px;
+        transform: rotate(45deg);
+        background-color: #fff;
+        content: '';
+        border-bottom: 1px solid $border-color;
+        border-right: 1px solid $border-color;
+      }
+      // background-color: red;
+    }
+
+    &_stats {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+  }
+}
+
+.rating-number {
+  width: 48px;
+  text-align: center;
+  font-weight: 600;
+  &.positive {
+    color: $positive-rating-color;
+  }
+  &.negative {
+    color: $negative-rating-color;
+  }
+  &.default {
+    color: $default-rating-color;
+  }
+}
+.rating-button {
+  width: 32px;
+  height: 32px;
+}
+
+@include mobile {
+  .comment {
+    font-size: $font-size-large;
+  }
+  .rating-button {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@include smallTablet {
+  .rating-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .comment {
+    font-size: $font-size-extra-large;
+    &__actions {
+      &_tooltip {
+        height: 36px;
+      }
+    }
+  }
+}

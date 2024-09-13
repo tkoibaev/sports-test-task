@@ -1,0 +1,27 @@
+@import '../../styles/mixins.scss';
+
+.avatar {
+  width: 32px;
+  min-width: 32px;
+
+  height: 32px;
+
+  &__content {
+    border-radius: 50%;
+    width: 100%;
+  }
+}
+
+@include mobile {
+  .avatar {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@include smallTablet {
+  .avatar {
+    width: 40px;
+    height: 40px;
+  }
+}

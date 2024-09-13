@@ -1,0 +1,44 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  background-color: $rating-button-default-color;
+  border-radius: 4px;
+
+  button {
+    display: flex;
+    align-items: center;
+
+    padding: 8px;
+
+    font-weight: 600;
+    font-size: $font-size-small;
+    line-height: $line-height-medium;
+  }
+
+  &:hover {
+    background-color: $rating-button-hover-color;
+  }
+}
+
+@include mobile {
+  .button {
+    button {
+      font-size: $font-size-medium;
+      font-weight: 500;
+    }
+  }
+}
+
+@include smallTablet {
+  .button {
+    button {
+      font-size: $font-size-large;
+      font-weight: 500;
+    }
+  }
+}

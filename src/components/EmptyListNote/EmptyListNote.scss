@@ -1,0 +1,7 @@
+@import '../../styles/variables.scss';
+.note {
+  margin-top: 50px;
+  p {
+    font-size: $font-size-extra-large;
+  }
+}

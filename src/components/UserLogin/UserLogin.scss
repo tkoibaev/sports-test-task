@@ -1,0 +1,15 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.user-login {
+  color: $text-primary-color;
+  font-weight: 600;
+  font-size: $font-size-medium;
+  line-height: $line-height-medium;
+}
+
+@include mobile {
+  .user-login {
+    font-size: $font-size-large;
+  }
+}

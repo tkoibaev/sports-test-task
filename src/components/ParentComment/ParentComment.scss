@@ -1,0 +1,41 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.parent-comment {
+  font-size: $font-size-small;
+  color: $text-secondary-color; //TODO
+  text-align: left;
+
+  padding-left: 8px;
+  border-left: 2px solid #eaeaea;
+
+  margin-bottom: 8px;
+
+  span {
+    font-weight: 600;
+  }
+
+  &__content {
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &.extended {
+      white-space: inherit;
+    }
+  }
+}
+
+@include mobile {
+  .parent-comment {
+    font-size: $font-size-medium;
+  }
+}
+
+@include smallTablet {
+  .parent-comment {
+    font-size: $font-size-large;
+  }
+}
