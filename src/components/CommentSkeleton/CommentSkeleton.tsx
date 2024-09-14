@@ -4,9 +4,7 @@ import './CommentSkeleton.scss';
 const CommentSkeleton = () => (
   <ContentLoader
     speed={2}
-    // width="auto"
     height={150}
-    // viewBox="0 0 900 150"
     backgroundColor="#f3f3f3"
     foregroundColor="#ecebeb"
     className="skeleton"

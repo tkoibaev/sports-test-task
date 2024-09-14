@@ -1,5 +1,4 @@
 import mockUserAvatar from './assets/user_avatar.jpg';
-
 export const mockAuthAuthor = {
   nick: 'Койбаев Тамерлан',
   id: '1',
