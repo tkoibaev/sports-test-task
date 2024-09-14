@@ -1,4 +1,3 @@
-import React from 'react';
 import './MainPage.scss';
 import CommentList from '../../components/CommentList/CommentList';
 

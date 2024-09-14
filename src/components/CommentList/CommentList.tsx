@@ -48,7 +48,6 @@ const CommentList = () => {
   };
 
   const addResponse = (currentComment: TComment, responseValue: string) => {
-    console.log(responseValue);
     const newResponse: TComment = {
       id: Date.now().toString(),
       text: responseValue,
