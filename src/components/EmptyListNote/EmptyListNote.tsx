@@ -1,4 +1,3 @@
-import React from 'react';
 import './EmptyListNote.scss';
 import CommentIcon from '../Icons/CommentIcon';
 

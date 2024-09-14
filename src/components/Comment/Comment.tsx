@@ -29,6 +29,14 @@ const Comment: React.FC<CommentProps> = ({ comment, onAddResponse }) => {
     setResponseValue('');
   };
 
+  const handleMouseEnter = () => {
+    tooltipRef.current?.classList.add('hover');
+  };
+
+  const handleMouseLeave = () => {
+    tooltipRef.current?.classList.remove('hover');
+  };
+
   useEffect(() => {
     ratingNumberRef.current?.addEventListener('mouseenter', handleMouseEnter);
     ratingNumberRef.current?.addEventListener('mouseleave', handleMouseLeave);
@@ -47,23 +55,16 @@ const Comment: React.FC<CommentProps> = ({ comment, onAddResponse }) => {
     };
   }, []);
 
-  const handleMouseEnter = () => {
-    tooltipRef.current?.classList.add('hover');
-  };
-
-  const handleMouseLeave = () => {
-    tooltipRef.current?.classList.remove('hover');
-  };
-
   const getRating = (positiveRating: number, negativeRating: number) => {
     if (positiveRating > negativeRating) {
-      return `+ ${positiveRating - negativeRating}`;
+      return `+${positiveRating - negativeRating}`;
     }
     if (positiveRating < negativeRating) {
-      return `- ${negativeRating - positiveRating}`;
+      return `-${negativeRating - positiveRating}`;
     }
     return '0';
   };
+
   return (
     <div className="comment">
       <div className="comment__header">

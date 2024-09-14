@@ -1,15 +1,4 @@
-import React from 'react';
-import { IconProps } from '../../props';
-
-const CommentIcon: React.FC<IconProps> = (
-  {
-    // className,
-    // color,
-    // width,
-    // height,
-    // onClick,
-  }
-) => {
+const CommentIcon = () => {
   return (
     <svg
       width="130px"

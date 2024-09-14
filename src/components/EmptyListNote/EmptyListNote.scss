@@ -1,7 +1,12 @@
 @import '../../styles/variables.scss';
 .note {
   margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   p {
     font-size: $font-size-extra-large;
+    text-align: center;
   }
 }

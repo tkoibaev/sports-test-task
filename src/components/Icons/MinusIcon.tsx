@@ -1,15 +1,4 @@
-import React from 'react';
-import { IconProps } from '../../props';
-
-const MinusIcon: React.FC<IconProps> = (
-  {
-    // className,
-    // color,
-    // width,
-    // height,
-    // onClick,
-  }
-) => {
+const MinusIcon = () => {
   return (
     <svg
       width="12"

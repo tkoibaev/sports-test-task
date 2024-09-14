@@ -1,15 +1,4 @@
-import React from 'react';
-import { IconProps } from '../../props';
-
-const PlusIcon: React.FC<IconProps> = (
-  {
-    // className,
-    // color,
-    // width,
-    // height,
-    // onClick,
-  }
-) => {
+const PlusIcon = () => {
   return (
     <svg
       width="12"

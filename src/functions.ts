@@ -25,7 +25,7 @@ export const translateMonthNameFromEnglish = (fullDate: string): string => {
 
 import { WORD } from './consts';
 /**
- * Подбирает правильное склонение слова "омментарий" в зависимости от числа
+ * Подбирает правильное склонение слова "комментарий" в зависимости от числа
  */
 export const getNoun = (number: number) => {
   let n = number % 100;
